@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
+    <h:head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"/>
+        <link href="../../../recursos/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="../../../recursos/css/misestilos.css" rel="stylesheet" type="text/css"/>
+        <title>Crear habitación</title>
+
+    </h:head>
+    <h:body>
+        <center>
+            <div class="container">
+                <br></br>
+                <i class="fas fa-pencil-ruler"></i>
+                <h1>Crear Habitación</h1>
+                <div>
+                    <div class="size">
+                        <h:form>
+
+                            <div class="row  justify-content-center contenedor d-flex d-wrap">
+                                <div class="col-7">
+                                    <br></br>
+                                    <h:outputLabel for="Numero" value="Numero de habitación" class="h5"/>
+                                    <h:inputText class="form-control form-control-lg" id="Numero" required="true" value="#{habitacionesController.tbHabitaciones.numero}"/>
+                                    <h:message for="Numero"/>
+                                    <br></br>
+                                    <h:outputLabel for="Baño" value="Baño Privado" class="h5"/>
+                                    <h:inputText id="Baño" required="true" value="#{habitacionesController.tbHabitaciones.banioPrivado}" class="form-control form-control-lg"/>
+                                    <h:message for="Baño"/>
+                                    <br></br>
+                                    <h:outputLabel for="Telefono" value="Telefono " class="h5"/>
+                                    <h:inputText id="Telefono"  a:type="" value="#{habitacionesController.tbHabitaciones.telefono}" class="form-control form-control-lg"/>
+                                    <h:message for="Telefono"/>
+                                    <br></br>
+                                    <h:outputLabel for="Calefaccion" value="Calefacción" class="h5"/>
+                                    <h:inputText id="Calefaccion" class="form-control form-control-lg" value="#{habitacionesController.tbHabitaciones.calefaccion}"/>
+                                    <h:message for="Calefaccion"/>
+                                    <br></br>
+                                    <h:outputLabel for="estado"  value="Estado " class="h5"/>
+                                    <h:inputText id="estado"  value="#{habitacionesController.tbHabitaciones.estado}" class="form-control form-control-lg"/>
+                                    <h:message for="estado"/>
+                                    <br></br>
+                                    <h:outputLabel for="sede" value="Sede del Hotel" class="h5"/>
+                                    <h:selectOneMenu  value="#{habitacionesController.sedesHotel.id}" class="form-control bordeSele form-control-lg" id="sede">
+                                        <f:selectItems value="#{habitacionesController.listHabi}" var="tipo"
+                                                       itemValue="#{tipo.id}"
+                                                       itemLabel="#{tipo.barrio}"/>
+                                    </h:selectOneMenu>
+                                    <h:outputLabel for="tipo" value="Tipo de habitacion" class="h5"/>
+                                    <h:selectOneMenu  value="#{habitacionesController.tblTiposHabitaciones.id}" class="form-control bordeSele form-control-lg" id="tipo">
+                                        <f:selectItems value="#{habitacionesController.listTipoHa}" var="tipos"
+                                                       itemValue="#{tipos.id}"
+                                                       itemLabel="#{tipos.nombre}"/>
+                                    </h:selectOneMenu>
+
+                                    <br></br>
+                                    <h:commandButton class="btn btn-success btn-block" value="Registrar habitacion" action="#{habitacionesController.registroHabitacion()}"/>
+                                    <br></br>
+
+                                </div>
+                            </div>
+                        </h:form>
+                        <h:messages globalOnly="true" showDetail="true" class="h4 text-black text-center" style="height: 40px; padding-top: 5px"/>
+
+                    </div>
+                </div>
+            </div>
+
+        </center>
+        <script src="../../../recursos/js/bootstrap.min.js" type="text/javascript"></script>
+
+        <script src="../../../recursos/js/jquery-3.3.1.slim.min.js" type="text/javascript"></script>
+        <script src="../../../recursos/js/popper.min.js" type="text/javascript"></script>
+
+    </h:body>
+</html>

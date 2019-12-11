@@ -1,0 +1,31 @@
+*{
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+.form{
+    width: 470px;
+    height: 100px;
+    margin-top: 350px;
+ 
+}
+.form-group{
+   text-align: left;
+}
+
+.title{
+    width: 100%;
+    height: 20%;
+    border: 1px solid black;
+}
+.form1{
+    width: 100%;
+    height: 80%;
+}
+i{
+    font-size: 150px;
+}
+.size{
+     text-align: left;
+  
+}

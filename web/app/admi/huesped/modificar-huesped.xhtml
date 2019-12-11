@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
+    <h:head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"/>
+        <link href="../../../recursos/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="../../../recursos/css/misestilos.css" rel="stylesheet" type="text/css"/>
+        <title>Crear habitación</title>
+
+    </h:head>
+    <h:body>
+        <center>
+            <div class="container">
+                <br></br>
+                <i class="fas fa-pencil-ruler"></i>
+                <h1>Modificar huesped</h1>
+                <div>
+                    <div class="size">
+                        <h:form>
+                            <h:inputHidden value="#{huespedController.tblUsuarios.id}"/>
+                            <h:inputHidden value="#{huespedController.tblCiudades.codigo}"/>
+                            <h:inputHidden value="#{huespedController.tblTiposDocumento.id}"/>
+                            <h:inputHidden value="#{huespedController.tblTiposUsuarios.id}"/>
+                            <div class="row  justify-content-center contenedor d-flex d-wrap">
+                                <div class="col-7">
+                                    <br></br>
+                                    <h:outputLabel for="estado" value="Estado " class="h5"/>
+                                    <h:inputText id="estado" class="form-control form-control-lg" value="#{huespedController.tblUsuarios.estado}"/>
+                                    <h:message for="estado"/>
+                                    <br></br>
+                                    <h:outputLabel for="doc" value="Documento" class="h5"/>
+                                    <h:inputText class="form-control form-control-lg" id="doc" required="true" value="#{huespedController.tblUsuarios.documento}"/>
+                                    <h:message for="doc"/>
+                                    <br></br>
+                                    <br></br>
+                                    <h:outputLabel for="nombres" value="Nombres" class="h5"/>
+                                    <h:inputText class="form-control form-control-lg" id="nombres" required="true" value="#{huespedController.tblUsuarios.nombres}"/>
+                                    <h:message for="nombres"/>
+                                    <br></br>
+                                    <h:outputLabel for="papellido" value="Primer apellido" class="h5"/>
+                                    <h:inputText id="papellido" required="true" value="#{huespedController.tblUsuarios.primerApellido}" class="form-control form-control-lg"/>
+                                    <h:message for="papellido"/>
+                                    <br></br>
+                                    <h:outputLabel for="sapellido" value="Segundo apellido " class="h5"/>
+                                    <h:inputText id="sapellido"  a:type="" value="#{huespedController.tblUsuarios.segundoApellido}" class="form-control form-control-lg"/>
+                                    <h:message for="sapellido"/>
+                                    <br></br>
+                                    <h:outputLabel for="dire" value="Dirección " class="h5"/>
+                                    <h:inputText id="dire"  a:type="" value="#{huespedController.tblUsuarios.direccion}" class="form-control form-control-lg"/>
+                                    <h:message for="dire"/>
+                                    <br></br>
+                                    <h:outputLabel for="tel" value="Teléfono " class="h5"/>
+                                    <h:inputText id="tel"  a:type="" value="#{huespedController.tblUsuarios.telefono}" class="form-control form-control-lg"/>
+                                    <h:message for="tel"/>
+                                    <br></br>
+                                    <h:outputLabel for="correo" value="Correo " class="h5"/>
+                                    <h:inputText id="correo" a:type="email" class="form-control form-control-lg" value="#{huespedController.tblUsuarios.correo}"/>
+                                    <h:message for="correo"/>
+                                    <br></br>
+                                    <h:outputLabel for="pas" value="Contraseña " class="h5"/>
+                                    <h:inputText id="pas" a:type="password" class="form-control form-control-lg" value="#{huespedController.tblUsuarios.clave}"/>
+                                    <h:message for="pas"/>
+                                    <br></br>
+                                    <br></br>
+                                    <h:outputLabel for="tipoDoc" value="Tipo Documento " class="h5"/>
+                                    <h:inputText id="tipoDoc" class="form-control form-control-lg" value="#{huespedController.tblTiposDocumento.id}"/>
+                                    <h:message for="tipoDoc"/>
+                                    <br></br>
+                                    <h:outputLabel for="tipoCi" value="Código ciudad " class="h5"/>
+                                    <h:inputText id="tipoCi" class="form-control form-control-lg" value="#{huespedController.tblCiudades.codigo}"/>
+                                    <h:message for="tipoCi"/>
+                                    <br></br>
+                                    <h:outputLabel for="tipoUse" value="Tipo usuario " class="h5"/>
+                                    <h:inputText id="tipoUse" class="form-control form-control-lg" value="#{huespedController.tblTiposUsuarios.id}"/>
+                                    <h:message for="tipoUse"/>
+                                    <br></br>
+                                    <h:commandButton class="btn btn-success btn-block" 
+                                                     value="Editar usuario" 
+                                                     actionListener="#{huespedController.editaUsurio()}"/>
+                                    <br></br>
+
+                                </div>
+                            </div>
+                        </h:form>
+                        <h:messages globalOnly="true" showDetail="true" class="h4 text-black text-center" style="height: 40px; padding-top: 5px"/>
+
+                    </div>
+                </div>
+            </div>
+
+        </center>
+        <script src="../../../recursos/js/bootstrap.min.js" type="text/javascript"></script>
+
+        <script src="../../../recursos/js/jquery-3.3.1.slim.min.js" type="text/javascript"></script>
+        <script src="../../../recursos/js/popper.min.js" type="text/javascript"></script>
+
+    </h:body>
+</html>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <link href="../../recursos/css/misestilos.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"/>
+        <link href="../../recursos/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <title>Administrador</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </h:head>
+    <h:body>
+     <f:event type="preRenderView" listener="#{loginController.verificarSesion()}"/>
+
+        <center>
+            <div class="container">
+                <div>
+                    <i class="fas fa-bed"></i>
+                    <h1>Descanso y placer</h1>
+                </div> 
+                
+                <div>
+                    <h:form>
+                    <h:commandLink action="habitaciones/crear-habitacion.xhtml" class="btn btn-success btn-block" value="Habitaciones"/>
+                    <h:commandLink action="huesped/listarReservas.xhtml" class="btn btn-success btn-block" value="Reservas"/>
+                    <h:commandLink action="huesped/listarReservas.xhtml" class="btn btn-success btn-block" value="Huespedes"/>
+                    <h:commandButton class="btn btn-danger btn-block" value="Cerrar Sessión" action="#{loginController.cerrarSession()}"/>
+                    <h:commandLink action="huesped/listar-huesped.xhtml" value="consultar estado"/>
+                    <a href="huesped/listar-huesped.xhtml"></a>
+                    </h:form>
+                </div>
+            </div>
+        </center>
+        <script src="../../recursos/js/jquery-3.3.1.slim.min.js" type="text/javascript"></script>
+        <script src="../../recursos/js/popper.min.js" type="text/javascript"></script>
+        <script src="../../recursos/js/bootstrap.min.js" type="text/javascript"></script>
+    </h:body>
+</html>

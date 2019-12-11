@@ -1,0 +1,168 @@
+ñ::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    background-color: #000;
+
+}
+
+::-webkit-scrollbar
+{
+    width: 12px;
+    background-color: #F5F5F5;
+    display: none;
+}
+
+::-webkit-scrollbar-thumb
+{
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #D62929;
+    display: none;
+}
+
+*{
+    box-sizing: border-box;
+}
+html,
+body,
+header,
+
+
+/*HEADER*/
+#Inicio {
+    height: 100%;
+}
+
+#Inicio {
+    background-image: url(../img/fondo2.jpg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    text-align: center;
+}
+
+/*NAVEGACION*/
+.top-nav-collapse, page-footer {
+    background-color: #21618C;
+}
+@media (max-width: 768px) {
+    .navbar:not(.top-nav-collapse) {
+        background-color: #85C1E9;
+    }
+}
+@media (min-width: 800px) and (max-width: 850px) {
+    .navbar:not(.top-nav-collapse) {
+    background-color: #24355C;
+    }
+}
+.scrolling-navbar{
+
+}
+.col-md-10 img{
+    width: 200px;
+    height: 150px;
+    margin: 20px;
+}
+.btn{
+    background: #21618C;
+}
+
+.nav-item{
+    padding: 10px;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+a:hover{
+    text-decoration: none;
+    color: white;
+
+    /*MODALES*/
+}
+
+.modal-title{
+    text-align: center;
+}
+.col-md-10 img{
+    width: 400px;
+    height: auto;
+}
+.asa img{
+    width: 100%;
+    height: 215px;
+}
+
+.col-md-12 iframe{
+    width: 1000px;
+    height: 200px;
+}
+.viewimg {
+    padding: 50px;
+}
+.col-lg-7 iframe{
+    width: 600px;
+    height: 300px;
+}
+.custom-control{
+    color: black;
+}
+/*QUIENES SOMOS*/
+.mb-5{
+    margin-top: 20px;
+}
+.my-5{
+    border-bottom : 2px solid #21618C;
+
+}
+/*productos*/
+.controls-end a i{
+    font-size: 40px;
+    color: #21618C;
+    margin-left: 20px;
+    margin-bottom: 20
+}
+.controls-end{
+}
+.btn{
+    color: black;
+    background-color: #21618C;
+}
+/*footer*/
+footer{
+    width: 100%;
+    height: 250px;
+    background-color:#1C2331;
+    margin-bottom: 25px;
+
+}
+
+
+.col-md-4{
+    float: left;
+}
+
+/*FOOTER*/
+.darken{
+    background-color: purple; 
+}
+input:valid{
+    border: 1px solid #1F618D;
+}
+input:invalid{
+    border: 1px solid #922B21;
+}
+
+footer{
+    color: white;
+}
+
+.imagenLogo{
+    width: 590px;
+    height: 390px;
+}
+
+
+
